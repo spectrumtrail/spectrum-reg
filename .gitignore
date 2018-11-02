@@ -18,6 +18,7 @@ capybara-*.html
 
 # Ignore bundler config.
 /.bundle
+.bundle/
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
