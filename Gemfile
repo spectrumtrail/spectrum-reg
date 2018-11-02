@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'solidus'
 gem 'solidus_auth_devise'
-gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+gem 'aws-sdk'
 gem "aws-sdk-s3", require: false
 gem 'mini_magick', '~> 4.8'
 
