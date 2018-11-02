@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_11_02_023650) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -842,7 +845,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_023650) do
     t.index ["deleted_at"], name: "index_spree_stock_items_on_deleted_at"
     t.index ["stock_location_id", "variant_id"], name: "stock_item_by_loc_and_var_id"
     t.index ["stock_location_id"], name: "index_spree_stock_items_on_stock_location_id"
-    t.index ["variant_id", "stock_location_id"], name: "index_spree_stock_items_on_variant_id_and_stock_location_id", unique: true, where: "deleted_at is null"
+    t.index ["variant_id", "stock_location_id"], name: "index_spree_stock_items_on_variant_id_and_stock_location_id", unique: true, where: "(deleted_at IS NULL)"
   end
 
   create_table "spree_stock_locations", force: :cascade do |t|
