@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Heroku Build Dependencies
+  - https://github.com/heroku/heroku-buildpack-activestorage-preview
+  - S3

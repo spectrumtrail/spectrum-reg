@@ -5,6 +5,7 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'aws-sdk', '< 2.0'
 gem "aws-sdk-s3", require: false
+gem 'mini_magick', '~> 4.8'
 
 ruby '2.5.3'
 
